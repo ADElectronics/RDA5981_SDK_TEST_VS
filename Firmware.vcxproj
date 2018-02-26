@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ApplicationType>LinuxDebugger</ApplicationType>
+    <SecureShellExecutable>ssh</SecureShellExecutable>
+    <RemoteDebuggerExecutable>gdb</RemoteDebuggerExecutable>
+    <LocalDebuggerExecutable>gdb</LocalDebuggerExecutable>
+    <OCDDebuggerServerAddress>localhost:3333</OCDDebuggerServerAddress>
+    <Keyword>IoT</Keyword>
+    <ProjectGuid>{3D8B16B6-9763-48AD-A514-F45680E8613B}</ProjectGuid>
+    <ProjectName>Firmware</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <None Include="Assets\LinuxDebugger.xaml" />
+    <None Include="Assets\LocalDebugger.xaml" />
+    <None Include="Assets\OCDDebugger.xaml" />
+    <None Include="Assets\linux_nmake.xaml" />
+    <None Include="Makefile" />
+    <None Include="project.mk" />
+    <None Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C\RDA5981C.ld" />
+    <None Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C\startup_RDA5981C.S" />
+    <None Include="SDK\paths.mk" />
+    <None Include="SDK\sdkbuild.mk" />
+    <None Include="SDK\sdkset.mk" />
+    <None Include="userset.mk" />
+  </ItemGroup>
+  <!--Import Project="$(MSBuildThisFileDirectory)\Microsoft.cpp.Linux.targets" /-->
+  <!-- To Enable linux debugger -->
+  <PropertyGroup>
+    <UseDefaultDebuggersPropertyPageSchemas>false</UseDefaultDebuggersPropertyPageSchemas>
+    <UseDefaultPropertyPageSchemas>false</UseDefaultPropertyPageSchemas>
+    <_ApplicableDebuggers>Desktop</_ApplicableDebuggers>
+    <DebuggerFlavor>LinuxDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(VCTargetsPath)$(LangID)\ProjectItemsSchema.xml" />
+    <PropertyPageSchema Include="$(VCTargetsPath)$(LangID)\directories.xml" />
+    <PropertyPageSchema Include="$(VCTargetsPath)$(LangID)\debugger_general.xml" />
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\Assets\LinuxDebugger.xaml" />
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\Assets\LocalDebugger.xaml" />
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\Assets\OCDDebugger.xaml" />
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\Assets\linux_nmake.xaml" />
+    <!-- project only rules -->
+    <PropertyPageSchema Include="$(VCTargetsPath)$(LangID)\general_makefile.xml">
+      <Context>Project</Context>
+    </PropertyPageSchema>
+    <!-- Property sheet only rules -->
+    <PropertyPageSchema Include="$(VCTargetsPath)$(LangID)\general_makefile_ps.xml;$(VCTargetsPath)$(LangID)\usermacros.xml">
+      <Context>PropertySheet</Context>
+    </PropertyPageSchema>
+    <!-- File only rules -->
+    <PropertyPageSchema Include="$(VCTargetsPath)$(LangID)\general_file.xml">
+      <Context>File</Context>
+    </PropertyPageSchema>
+  </ItemGroup>
+  <ItemGroup>
+    <DesktopDebuggerPages Include="$(MSBuildThisFileDirectory)\Assets\LinuxDebugger.xaml" />
+    <DesktopDebuggerPages Include="$(MSBuildThisFileDirectory)\Assets\LocalDebugger.xaml" />
+    <DesktopDebuggerPages Include="$(MSBuildThisFileDirectory)\Assets\OCDDebugger.xaml" />
+    <DesktopDebuggerPages Include="$(MSBuildThisFileDirectory)\Assets\linux_nmake.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="Linux" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDK\hal\api\AnalogIn.h" />
+    <ClInclude Include="SDK\hal\api\AnalogOut.h" />
+    <ClInclude Include="SDK\hal\api\BusIn.h" />
+    <ClInclude Include="SDK\hal\api\BusInOut.h" />
+    <ClInclude Include="SDK\hal\api\BusOut.h" />
+    <ClInclude Include="SDK\hal\api\Callback.h" />
+    <ClInclude Include="SDK\hal\api\CallChain.h" />
+    <ClInclude Include="SDK\hal\api\CAN.h" />
+    <ClInclude Include="SDK\hal\api\can_helper.h" />
+    <ClInclude Include="SDK\hal\api\CircularBuffer.h" />
+    <ClInclude Include="SDK\hal\api\critical.h" />
+    <ClInclude Include="SDK\hal\api\CThunk.h" />
+    <ClInclude Include="SDK\hal\api\DigitalIn.h" />
+    <ClInclude Include="SDK\hal\api\DigitalInOut.h" />
+    <ClInclude Include="SDK\hal\api\DigitalOut.h" />
+    <ClInclude Include="SDK\hal\api\DirHandle.h" />
+    <ClInclude Include="SDK\hal\api\Ethernet.h" />
+    <ClInclude Include="SDK\hal\api\FileBase.h" />
+    <ClInclude Include="SDK\hal\api\FileHandle.h" />
+    <ClInclude Include="SDK\hal\api\FileLike.h" />
+    <ClInclude Include="SDK\hal\api\FilePath.h" />
+    <ClInclude Include="SDK\hal\api\FileSystemLike.h" />
+    <ClInclude Include="SDK\hal\api\FunctionPointer.h" />
+    <ClInclude Include="SDK\hal\api\I2C.h" />
+    <ClInclude Include="SDK\hal\api\I2CSlave.h" />
+    <ClInclude Include="SDK\hal\api\InterruptIn.h" />
+    <ClInclude Include="SDK\hal\api\InterruptManager.h" />
+    <ClInclude Include="SDK\hal\api\LocalFileSystem.h" />
+    <ClInclude Include="SDK\hal\api\LowPowerTicker.h" />
+    <ClInclude Include="SDK\hal\api\LowPowerTimeout.h" />
+    <ClInclude Include="SDK\hal\api\LowPowerTimer.h" />
+    <ClInclude Include="SDK\hal\api\mbed.h" />
+    <ClInclude Include="SDK\hal\api\mbed_assert.h" />
+    <ClInclude Include="SDK\hal\api\mbed_debug.h" />
+    <ClInclude Include="SDK\hal\api\mbed_error.h" />
+    <ClInclude Include="SDK\hal\api\mbed_interface.h" />
+    <ClInclude Include="SDK\hal\api\mbed_mem_trace.h" />
+    <ClInclude Include="SDK\hal\api\mbed_stats.h" />
+    <ClInclude Include="SDK\hal\api\platform.h" />
+    <ClInclude Include="SDK\hal\api\PlatformMutex.h" />
+    <ClInclude Include="SDK\hal\api\PortIn.h" />
+    <ClInclude Include="SDK\hal\api\PortInOut.h" />
+    <ClInclude Include="SDK\hal\api\PortOut.h" />
+    <ClInclude Include="SDK\hal\api\PwmOut.h" />
+    <ClInclude Include="SDK\hal\api\RawSerial.h" />
+    <ClInclude Include="SDK\hal\api\rtc_time.h" />
+    <ClInclude Include="SDK\hal\api\semihost_api.h" />
+    <ClInclude Include="SDK\hal\api\Serial.h" />
+    <ClInclude Include="SDK\hal\api\SerialBase.h" />
+    <ClInclude Include="SDK\hal\api\SingletonPtr.h" />
+    <ClInclude Include="SDK\hal\api\SPI.h" />
+    <ClInclude Include="SDK\hal\api\SPISlave.h" />
+    <ClInclude Include="SDK\hal\api\Stream.h" />
+    <ClInclude Include="SDK\hal\api\Ticker.h" />
+    <ClInclude Include="SDK\hal\api\Timeout.h" />
+    <ClInclude Include="SDK\hal\api\Timer.h" />
+    <ClInclude Include="SDK\hal\api\TimerEvent.h" />
+    <ClInclude Include="SDK\hal\api\toolchain.h" />
+    <ClInclude Include="SDK\hal\api\Transaction.h" />
+    <ClInclude Include="SDK\hal\api\wait_api.h" />
+    <ClInclude Include="SDK\hal\hal\analogin_api.h" />
+    <ClInclude Include="SDK\hal\hal\analogout_api.h" />
+    <ClInclude Include="SDK\hal\hal\buffer.h" />
+    <ClInclude Include="SDK\hal\hal\can_api.h" />
+    <ClInclude Include="SDK\hal\hal\dma_api.h" />
+    <ClInclude Include="SDK\hal\hal\ethernet_api.h" />
+    <ClInclude Include="SDK\hal\hal\flash_api.h" />
+    <ClInclude Include="SDK\hal\hal\gpio_api.h" />
+    <ClInclude Include="SDK\hal\hal\gpio_irq_api.h" />
+    <ClInclude Include="SDK\hal\hal\i2c_api.h" />
+    <ClInclude Include="SDK\hal\hal\lp_ticker_api.h" />
+    <ClInclude Include="SDK\hal\hal\pinmap.h" />
+    <ClInclude Include="SDK\hal\hal\port_api.h" />
+    <ClInclude Include="SDK\hal\hal\pwmout_api.h" />
+    <ClInclude Include="SDK\hal\hal\rtc_api.h" />
+    <ClInclude Include="SDK\hal\hal\serial_api.h" />
+    <ClInclude Include="SDK\hal\hal\sleep_api.h" />
+    <ClInclude Include="SDK\hal\hal\spi_api.h" />
+    <ClInclude Include="SDK\hal\hal\storage_abstraction\Driver_Common.h" />
+    <ClInclude Include="SDK\hal\hal\storage_abstraction\Driver_Storage.h" />
+    <ClInclude Include="SDK\hal\hal\ticker_api.h" />
+    <ClInclude Include="SDK\hal\hal\us_ticker_api.h" />
+    <ClInclude Include="SDK\hal\targets\cmsis\core_cm4.h" />
+    <ClInclude Include="SDK\hal\targets\cmsis\core_cm4_simd.h" />
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\cmsis.h" />
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\cmsis_nvic.h" />
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\RDA5991H.h" />
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\system_RDA5991H.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\device.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\gpio_object.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\objects.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\PeripheralNames.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\PinNames.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\PortNames.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_aes_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_ccfg_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_dma.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_gpadc_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_i2s_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_montmul_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_sleep_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_trng_api.h" />
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_wdt_api.h" />
+    <ClInclude Include="SDK\rtos\rtos\Mail.h" />
+    <ClInclude Include="SDK\rtos\rtos\MemoryPool.h" />
+    <ClInclude Include="SDK\rtos\rtos\Mutex.h" />
+    <ClInclude Include="SDK\rtos\rtos\Queue.h" />
+    <ClInclude Include="SDK\rtos\rtos\rtos.h" />
+    <ClInclude Include="SDK\rtos\rtos\RtosTimer.h" />
+    <ClInclude Include="SDK\rtos\rtos\rtos_idle.h" />
+    <ClInclude Include="SDK\rtos\rtos\Semaphore.h" />
+    <ClInclude Include="SDK\rtos\rtos\Thread.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\cmsis_os.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\RTX_CM_lib.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\RTX_Config.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Event.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_HAL_CM.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_List.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Memory.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Robin.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_System.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Task.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Time.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Timer.h" />
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="demo\analog_in\main.cpp" />
+    <ClCompile Include="demo\blinky\main.cpp" />
+    <ClCompile Include="SDK\hal\common\AnalogIn.cpp" />
+    <ClCompile Include="SDK\hal\common\BusIn.cpp" />
+    <ClCompile Include="SDK\hal\common\BusInOut.cpp" />
+    <ClCompile Include="SDK\hal\common\BusOut.cpp" />
+    <ClCompile Include="SDK\hal\common\CallChain.cpp" />
+    <ClCompile Include="SDK\hal\common\CAN.cpp" />
+    <ClCompile Include="SDK\hal\common\Ethernet.cpp" />
+    <ClCompile Include="SDK\hal\common\FileBase.cpp" />
+    <ClCompile Include="SDK\hal\common\FileLike.cpp" />
+    <ClCompile Include="SDK\hal\common\FilePath.cpp" />
+    <ClCompile Include="SDK\hal\common\FileSystemLike.cpp" />
+    <ClCompile Include="SDK\hal\common\I2C.cpp" />
+    <ClCompile Include="SDK\hal\common\I2CSlave.cpp" />
+    <ClCompile Include="SDK\hal\common\InterruptIn.cpp" />
+    <ClCompile Include="SDK\hal\common\InterruptManager.cpp" />
+    <ClCompile Include="SDK\hal\common\LocalFileSystem.cpp" />
+    <ClCompile Include="SDK\hal\common\mbed_alloc_wrappers.cpp" />
+    <ClCompile Include="SDK\hal\common\mbed_assert.c" />
+    <ClCompile Include="SDK\hal\common\mbed_board.c" />
+    <ClCompile Include="SDK\hal\common\mbed_critical.c" />
+    <ClCompile Include="SDK\hal\common\mbed_error.c" />
+    <ClCompile Include="SDK\hal\common\mbed_gpio.c" />
+    <ClCompile Include="SDK\hal\common\mbed_interface.c" />
+    <ClCompile Include="SDK\hal\common\mbed_lp_ticker_api.c" />
+    <ClCompile Include="SDK\hal\common\mbed_mem_trace.c" />
+    <ClCompile Include="SDK\hal\common\mbed_pinmap_common.c" />
+    <ClCompile Include="SDK\hal\common\mbed_rtc_time.cpp" />
+    <ClCompile Include="SDK\hal\common\mbed_semihost_api.c" />
+    <ClCompile Include="SDK\hal\common\mbed_ticker_api.c" />
+    <ClCompile Include="SDK\hal\common\mbed_us_ticker_api.c" />
+    <ClCompile Include="SDK\hal\common\mbed_wait_api.c" />
+    <ClCompile Include="SDK\hal\common\RawSerial.cpp" />
+    <ClCompile Include="SDK\hal\common\retarget.cpp" />
+    <ClCompile Include="SDK\hal\common\Serial.cpp" />
+    <ClCompile Include="SDK\hal\common\SerialBase.cpp" />
+    <ClCompile Include="SDK\hal\common\SPI.cpp" />
+    <ClCompile Include="SDK\hal\common\SPISlave.cpp" />
+    <ClCompile Include="SDK\hal\common\Stream.cpp" />
+    <ClCompile Include="SDK\hal\common\Ticker.cpp" />
+    <ClCompile Include="SDK\hal\common\Timeout.cpp" />
+    <ClCompile Include="SDK\hal\common\Timer.cpp" />
+    <ClCompile Include="SDK\hal\common\TimerEvent.cpp" />
+    <ClCompile Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\cmsis_nvic.c" />
+    <ClCompile Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\system_RDA5991H.c" />
+    <ClCompile Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\rda_retarget.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\analogin_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\gpio_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\gpio_irq_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\i2c_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\lp_ticker.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\mbed_overrides.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\pinmap.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\port_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\pwmout_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_exif_isr.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_gpadc_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_i2s_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_timer_isr.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_wdt_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rtc_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\serial_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\sleep.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\spi_api.c" />
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\us_ticker.c" />
+    <ClCompile Include="SDK\rtos\rtos\Mutex.cpp" />
+    <ClCompile Include="SDK\rtos\rtos\RtosTimer.cpp" />
+    <ClCompile Include="SDK\rtos\rtos\rtos_idle.c" />
+    <ClCompile Include="SDK\rtos\rtos\Semaphore.cpp" />
+    <ClCompile Include="SDK\rtos\rtos\Thread.cpp" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\HAL_CM.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\RTX_Conf_CM.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_CMSIS.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Event.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_List.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Memory.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Robin.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_System.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Task.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Time.c" />
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Timer.c" />
+  </ItemGroup>
+  <!-- To Enable linux debugger End -->
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>mingw32-make -s -j 1 all</NMakeBuildCommandLine>
+    <IncludePath>C:\RTL\6-2017-q2\arm-none-eabi\include;$(SDK_PATH)\hal\api;$(SDK_PATH)\hal\common;$(SDK_PATH)\hal\hal;$(SDK_PATH)\hal\hal\storage_abstraction;$(SDK_PATH)\hal\targets\cmsis;$(SDK_PATH)\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H;$(SDK_PATH)\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM;$(SDK_PATH)\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C;$(SDK_PATH)\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H;$(SDK_PATH)\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM;$(SDK_PATH)\rtos\rtos;$(SDK_PATH)\rtos\rtx\TARGET_CORTEX_M;$(SDK_PATH)\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC;$(ProjectDir)\demo;$(IncludePath)</IncludePath>
+    <NMakeReBuildCommandLine>mingw32-make -s -j 1 rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>mingw32-make -s clean</NMakeCleanCommandLine>
+    <NMakeOutput>ram_all.bin</NMakeOutput>
+    <OutDir>$(ProjectDir)Debug\bin\</OutDir>
+    <IntDir>$(ProjectDir)Debug</IntDir>
+    <NMakePreprocessorDefinitions>TARGET_UNO_91H;__CORTEX_M4F;__FPU_PRESENT;DEVICE_PORTIN;DEVICE_PORTOUT;DEVICE_PORTINOUT;DEVICE_INTERRUPTIN;DEVICE_SERIAL;DEVICE_STDIO_MESSAGES;DEVICE_PWMOUT;DEVICE_SPI;DEVICE_LOWPOWERTIMER;DEVICE_I2C;DEVICE_ANALOGIN;DEVICE_FLASH;DEVICE_SLEEP;DEVICE_RTC;MBED_CONF_CORE_STDIO_BAUD_RATE=921600;__STDC__;__extension__=</NMakePreprocessorDefinitions>
+    <ExecutablePath>$(PATH)</ExecutablePath>
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <ExcludePath>
+    </ExcludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>
+    </NMakeBuildCommandLine>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <BuildLog>
+      <Path>$(ProjectDir)Debug\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="Assets\linux_nmake.xaml">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\LinuxDebugger.xaml">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\LocalDebugger.xaml">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\OCDDebugger.xaml">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="SDK\paths.mk">
+      <Filter>SDK</Filter>
+    </None>
+    <None Include="SDK\sdkbuild.mk">
+      <Filter>SDK</Filter>
+    </None>
+    <None Include="SDK\sdkset.mk">
+      <Filter>SDK</Filter>
+    </None>
+    <None Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C\RDA5981C.ld">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C</Filter>
+    </None>
+    <None Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C\startup_RDA5981C.S">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C</Filter>
+    </None>
+    <None Include="Makefile" />
+    <None Include="project.mk" />
+    <None Include="userset.mk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{08a26e93-524c-4982-a01c-c8d4f223d6be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{2562b144-7e70-4e4f-82c1-156fb643b6cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal">
+      <UniqueIdentifier>{5f505e30-d95f-44b9-9ccb-c39cdfd21c28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\rtos">
+      <UniqueIdentifier>{9a3fb38e-a67c-4288-9384-b0aaa81fd267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\api">
+      <UniqueIdentifier>{8a69c93d-1395-4388-a886-bf3cf340ef1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\common">
+      <UniqueIdentifier>{3f7b5b0b-a41b-4293-83f4-8a3d657f86dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\hal">
+      <UniqueIdentifier>{a76e754e-3f5d-41e3-870d-0f3f298a4f06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets">
+      <UniqueIdentifier>{c2938e40-0afb-489e-a7e1-458d0cccdd61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\hal\storage_abstraction">
+      <UniqueIdentifier>{d1a8a4d9-2187-4158-b1e9-bd1d828f5af5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\cmsis">
+      <UniqueIdentifier>{99c97d80-8454-406e-83c4-436c38f8bdf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\hal">
+      <UniqueIdentifier>{1e0a3038-0187-49a9-9fa9-e59fc0c924c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\hal\TARGET_RDA">
+      <UniqueIdentifier>{e1601c66-3699-41dc-9e81-f6650023c3d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H">
+      <UniqueIdentifier>{7686803e-7c11-4c11-b11d-92da8bd51fd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\cmsis\TARGET_RDA">
+      <UniqueIdentifier>{7ea85832-530a-4179-9c37-45f1d6b01f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H">
+      <UniqueIdentifier>{695446fd-7ae4-48c5-9f09-b5f5ddd03591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM">
+      <UniqueIdentifier>{9e9fbc26-bc1c-4ada-a123-4202097e12f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\TARGET_UNO_81C">
+      <UniqueIdentifier>{650376be-b795-41e6-822c-c77684bd2fe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\rtos\rtos">
+      <UniqueIdentifier>{5e08afe0-7994-4c5a-9225-d96a4ee9ccaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\rtos\rtx">
+      <UniqueIdentifier>{53e9daff-f880-4109-a063-efca447ea8b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\rtos\rtx\TARGET_CORTEX_M">
+      <UniqueIdentifier>{b9bc901c-7f1b-419f-8c28-2da429fb3579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7">
+      <UniqueIdentifier>{950349d7-943b-4059-9161-9f76f2ba9590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\rtos\rtx\TARGET_CORTEX_M\TARGET_RTOS_M4_M7\TOOLCHAIN_GCC">
+      <UniqueIdentifier>{d823b032-f348-4df3-9612-8219641c79a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demo">
+      <UniqueIdentifier>{6d7dd548-4401-4b94-be14-0f1b0bbcd16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demo\blinky">
+      <UniqueIdentifier>{fa519aa8-d51a-4855-8391-78e2f518eed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demo\analog_in">
+      <UniqueIdentifier>{960e6b69-f88d-44b5-964c-57bf49045ea6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDK\hal\api\AnalogIn.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\AnalogOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\BusIn.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\BusInOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\BusOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Callback.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\CallChain.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\CAN.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\can_helper.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\CircularBuffer.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\critical.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\CThunk.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\DigitalIn.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\DigitalInOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\DigitalOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\DirHandle.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Ethernet.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\FileBase.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\FileHandle.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\FileLike.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\FilePath.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\FileSystemLike.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\FunctionPointer.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\I2C.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\I2CSlave.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\InterruptIn.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\InterruptManager.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\LocalFileSystem.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\LowPowerTicker.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\LowPowerTimeout.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\LowPowerTimer.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed_assert.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed_debug.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed_error.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed_interface.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed_mem_trace.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\mbed_stats.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\platform.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\PlatformMutex.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\PortIn.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\PortInOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\PortOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\PwmOut.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\RawSerial.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\rtc_time.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\semihost_api.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Serial.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\SerialBase.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\SingletonPtr.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\SPI.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\SPISlave.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Stream.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Ticker.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Timeout.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Timer.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\TimerEvent.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\toolchain.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\Transaction.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\api\wait_api.h">
+      <Filter>SDK\hal\api</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\analogin_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\analogout_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\buffer.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\can_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\dma_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\ethernet_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\flash_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\gpio_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\gpio_irq_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\i2c_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\lp_ticker_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\pinmap.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\port_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\pwmout_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\rtc_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\serial_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\sleep_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\spi_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\ticker_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\us_ticker_api.h">
+      <Filter>SDK\hal\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\storage_abstraction\Driver_Common.h">
+      <Filter>SDK\hal\hal\storage_abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\hal\storage_abstraction\Driver_Storage.h">
+      <Filter>SDK\hal\hal\storage_abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\device.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\gpio_object.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\objects.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\PeripheralNames.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\PinNames.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\PortNames.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_aes_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_ccfg_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_dma.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_gpadc_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_i2s_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_montmul_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_sleep_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_trng_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_wdt_api.h">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\cmsis.h">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\cmsis_nvic.h">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\RDA5991H.h">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\system_RDA5991H.h">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\cmsis\core_cm4.h">
+      <Filter>SDK\hal\targets\cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\hal\targets\cmsis\core_cm4_simd.h">
+      <Filter>SDK\hal\targets\cmsis</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\cmsis_os.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Event.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_HAL_CM.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_List.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Memory.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Robin.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_System.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Task.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Time.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Timer.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_TypeDef.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\RTX_CM_lib.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtx\TARGET_CORTEX_M\RTX_Config.h">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\Mail.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\MemoryPool.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\Mutex.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\Queue.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\rtos.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\rtos_idle.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\RtosTimer.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\Semaphore.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\rtos\rtos\Thread.h">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SDK\hal\common\AnalogIn.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\BusIn.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\BusInOut.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\BusOut.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\CallChain.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\CAN.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\Ethernet.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\FileBase.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\FileLike.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\FilePath.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\FileSystemLike.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\I2C.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\I2CSlave.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\InterruptIn.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\InterruptManager.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\LocalFileSystem.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_alloc_wrappers.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_assert.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_board.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_critical.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_error.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_gpio.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_interface.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_lp_ticker_api.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_mem_trace.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_pinmap_common.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_rtc_time.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_semihost_api.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_ticker_api.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_us_ticker_api.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\mbed_wait_api.c">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\RawSerial.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\retarget.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\Serial.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\SerialBase.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\SPI.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\SPISlave.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\Stream.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\Ticker.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\Timeout.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\Timer.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\common\TimerEvent.cpp">
+      <Filter>SDK\hal\common</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\analogin_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\gpio_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\gpio_irq_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\i2c_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\lp_ticker.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\mbed_overrides.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\pinmap.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\port_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\pwmout_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_exif_isr.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_gpadc_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_i2s_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_timer_isr.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rda_wdt_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\rtc_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\serial_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\sleep.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\spi_api.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H\us_ticker.c">
+      <Filter>SDK\hal\targets\hal\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM\rda_retarget.c">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\TOOLCHAIN_GCC_ARM</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\cmsis_nvic.c">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H\system_RDA5991H.c">
+      <Filter>SDK\hal\targets\cmsis\TARGET_RDA\TARGET_UNO_91H</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\HAL_CM.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_CMSIS.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Event.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_List.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mailbox.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_MemBox.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Memory.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Mutex.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_OsEventObserver.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Robin.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Semaphore.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_System.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Task.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Time.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\rt_Timer.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtx\TARGET_CORTEX_M\RTX_Conf_CM.c">
+      <Filter>SDK\rtos\rtx\TARGET_CORTEX_M</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtos\Mutex.cpp">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtos\rtos_idle.c">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtos\RtosTimer.cpp">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtos\Semaphore.cpp">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\rtos\rtos\Thread.cpp">
+      <Filter>SDK\rtos\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\blinky\main.cpp">
+      <Filter>demo\blinky</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\analog_in\main.cpp">
+      <Filter>demo\analog_in</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
