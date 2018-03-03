@@ -108,6 +108,9 @@
     <Filter Include="demo\analog_in">
       <UniqueIdentifier>{960e6b69-f88d-44b5-964c-57bf49045ea6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="demo\pwm">
+      <UniqueIdentifier>{1235b80e-00cc-4e1d-bd2d-0e9be1ee7a3c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDK\hal\api\AnalogIn.h">
@@ -762,6 +765,9 @@
     </ClCompile>
     <ClCompile Include="demo\analog_in\main.cpp">
       <Filter>demo\analog_in</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\pwm\main.cpp">
+      <Filter>demo\pwm</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

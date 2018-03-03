@@ -1,5 +1,5 @@
 
-SRC_DIRS = demo/blinky
+SRC_DIRS = demo/pwm
 
 INCLUDES =
 

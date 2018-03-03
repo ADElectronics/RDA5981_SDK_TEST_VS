@@ -1,0 +1,11 @@
+﻿  ===========================================================
+  Compile (firmware)
+  ===========================================================
+  Link (firmware)
+  ===========================================================
+  Build Info
+  ===========================================================
+     text	   data	    bss	    dec	    hex	filename
+    44108	    552	  11616	  56276	   dbd4	Debug/bin/firmware.elf
+    44108	    552	  11616	  56276	   dbd4	(TOTALS)
+  copy from `Debug/bin/firmware.elf' [elf32-littlearm] to `Debug/bin/firmware.bin' [binary]

@@ -8,6 +8,8 @@ include $(SDK_PATH)/paths.mk
 
 # базовые 
 CC_SYMBOLS = -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DNDEBUG -DTARGET_UNO_91H -D__CORTEX_M4F -D__MPU_PRESENT -D__FPU_PRESENT
+CC_SYMBOLS += -DRDA_PARTITION_INDEX=0 
+#CC_SYMBOLS += -DRDA_ICACHE_DISABLE
 
 # возможности SoC
 CC_SYMBOLS += -DDEVICE_PORTIN -DDEVICE_PORTOUT -DDEVICE_PORTINOUT -DDEVICE_INTERRUPTIN -DDEVICE_SERIAL -DDEVICE_STDIO_MESSAGES
@@ -28,7 +30,7 @@ LIB_DIRS = $(SDK_PATH)/hal/targets/hal/TARGET_RDA/TARGET_UNO_91H/TOOLCHAIN_GCC_A
 # LD
 #==========================================================================================
 
-LD_FILE = $(SDK_PATH)/hal/targets/cmsis/$(TARGET_VENDOR)/$(TARGET_FAMILY)/TOOLCHAIN_GCC_ARM/TARGET_UNO_81C/RDA5981C.ld
+LD_FILE = $(SDK_PATH)/hal/targets/cmsis/$(TARGET_VENDOR)/$(TARGET_FAMILY)/TOOLCHAIN_GCC_ARM/TARGET_UNO_81A/RDA5981A.ld
 
 #==========================================================================================
 # Include folder list
@@ -57,7 +59,7 @@ SRC_DIRS += $(SDK_PATH)/hal/targets/hal/$(TARGET_VENDOR)/$(TARGET_FAMILY)
 
 SRC_DIRS += $(SDK_PATH)/hal/targets/cmsis/$(TARGET_VENDOR)/$(TARGET_FAMILY)
 SRC_DIRS += $(SDK_PATH)/hal/targets/cmsis/$(TARGET_VENDOR)/$(TARGET_FAMILY)/TOOLCHAIN_GCC_ARM
-SRC_DIRS += $(SDK_PATH)/hal/targets/cmsis/$(TARGET_VENDOR)/$(TARGET_FAMILY)/TOOLCHAIN_GCC_ARM/TARGET_UNO_81C
+SRC_DIRS += $(SDK_PATH)/hal/targets/cmsis/$(TARGET_VENDOR)/$(TARGET_FAMILY)/TOOLCHAIN_GCC_ARM/TARGET_UNO_81A
 
 SRC_DIRS += $(SDK_PATH)/rtos/rtos
 SRC_DIRS += $(SDK_PATH)/rtos/rtx/TARGET_CORTEX_M

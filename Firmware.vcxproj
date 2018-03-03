@@ -254,6 +254,7 @@
   <ItemGroup>
     <ClCompile Include="demo\analog_in\main.cpp" />
     <ClCompile Include="demo\blinky\main.cpp" />
+    <ClCompile Include="demo\pwm\main.cpp" />
     <ClCompile Include="SDK\hal\common\AnalogIn.cpp" />
     <ClCompile Include="SDK\hal\common\BusIn.cpp" />
     <ClCompile Include="SDK\hal\common\BusInOut.cpp" />
@@ -350,7 +351,7 @@
     <NMakeOutput>ram_all.bin</NMakeOutput>
     <OutDir>$(ProjectDir)Debug\bin\</OutDir>
     <IntDir>$(ProjectDir)Debug</IntDir>
-    <NMakePreprocessorDefinitions>TARGET_UNO_91H;__CORTEX_M4F;__FPU_PRESENT;DEVICE_PORTIN;DEVICE_PORTOUT;DEVICE_PORTINOUT;DEVICE_INTERRUPTIN;DEVICE_SERIAL;DEVICE_STDIO_MESSAGES;DEVICE_PWMOUT;DEVICE_SPI;DEVICE_LOWPOWERTIMER;DEVICE_I2C;DEVICE_ANALOGIN;DEVICE_FLASH;DEVICE_SLEEP;DEVICE_RTC;MBED_CONF_CORE_STDIO_BAUD_RATE=921600;__STDC__;__extension__=</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>TARGET_UNO_91H;__CORTEX_M4F;M4;__FPU_PRESENT;DEVICE_PORTIN;DEVICE_PORTOUT;DEVICE_PORTINOUT;DEVICE_INTERRUPTIN;DEVICE_SERIAL;DEVICE_STDIO_MESSAGES;DEVICE_PWMOUT;DEVICE_SPI;DEVICE_LOWPOWERTIMER;DEVICE_I2C;DEVICE_ANALOGIN;DEVICE_FLASH;DEVICE_SLEEP;DEVICE_RTC;MBED_CONF_CORE_STDIO_BAUD_RATE=921600;__STDC__;__extension__=</NMakePreprocessorDefinitions>
     <ExecutablePath>$(PATH)</ExecutablePath>
     <ReferencePath />
     <LibraryPath />

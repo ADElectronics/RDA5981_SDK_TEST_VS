@@ -1,0 +1,6 @@
+h
+loadbin Debug/bin/firmware.bin 0x100000
+verifybin Debug/bin/firmware.bin, 0x100000
+r
+g
+q
