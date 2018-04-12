@@ -1,6 +1,6 @@
 h
-loadbin Debug/bin/firmware.bin 0x100000
-verifybin Debug/bin/firmware.bin, 0x100000
+loadbin Debug/bin/firmware.bin 0x14001000
+verifybin Debug/bin/firmware.bin, 0x14001000
 r
 g
 q
